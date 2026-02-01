@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: auto-round
-  version: 0.9.6
+  version: "0.9.7"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/auto_round-${{ version }}.tar.gz
-  sha256: c909700b0bef1b85d85a17c73a52ca8f6b768c6e87294246adc6b650c5a4306d
+  sha256: bb4f8c8a0bfa7604e5b5123c89c7289216de70b6fe169810e998bbc6f933045f
 
 build:
   number: 0
@@ -44,7 +44,7 @@ requirements:
     - threadpoolctl
     - pytorch
     - tqdm
-    - transformers >=4.38
+    - transformers >=4.38,<5
 
 tests:
   - python:
@@ -53,8 +53,8 @@ tests:
         - auto_round_extension
       pip_check: true
       python_version:
-         - ${{ python_min }}.*
-         - "*"
+        - ${{ python_min }}.*
+        - "*"
   - requirements:
       run:
         - pip

@@ -44,7 +44,7 @@ requirements:
     - threadpoolctl
     - pytorch
     - tqdm
-    - transformers >=4.38
+    - transformers >=4.38,<5
 
 tests:
   - python:

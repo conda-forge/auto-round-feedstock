@@ -45,6 +45,7 @@ requirements:
     - pytorch
     - tqdm
     - transformers >=4.38,<5
+    - pydantic
 
 tests:
   - python:

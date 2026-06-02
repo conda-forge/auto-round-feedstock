@@ -68,13 +68,16 @@ tests:
       - auto-round --help
       - auto_round_eval --help
       - auto-round-eval --help
-      - auto-round-fast --help
-      - auto_round_fast --help
+      - auto_round_mllm --help
+      - auto-round-mllm --help
+      - auto-round-rtn --help
+      - auto_round_rtn --help
+      - auto-round-opt-rtn --help
+      - auto_round_opt_rtn --help
       - auto-round-best --help
       - auto_round_best --help
       - auto-round-light --help
       - auto_round_light --help
-
 about:
   summary: "Repository of AutoRound: Advanced Weight-Only Quantization Algorithm for LLMs"
   license: Apache-2.0

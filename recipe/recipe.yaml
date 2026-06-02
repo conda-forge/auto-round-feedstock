@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: auto-round
-  version: "0.12.3"
+  version: "0.13.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/auto_round-${{ version }}.tar.gz
-  sha256: bc3370f7c3dabcae35d7f513e0bea3a1ee60bb9bfe0766ff25e4cc71fdf18f31
+  sha256: 60d6b87640c7d73f49190033c9b5af40d75ee66579479b8277b5383c669bd153
 
 build:
   number: 0
@@ -22,8 +22,12 @@ build:
       - auto-round = auto_round.__main__:run
       - auto_round_eval = auto_round.__main__:run_eval
       - auto-round-eval = auto_round.__main__:run_eval
-      - auto-round-fast = auto_round.__main__:run_fast
-      - auto_round_fast = auto_round.__main__:run_fast
+      - auto_round_mllm = auto_round.__main__:run_mllm
+      - auto-round-mllm = auto_round.__main__:run_mllm
+      - auto-round-rtn = auto_round.__main__:run_rtn
+      - auto_round_rtn = auto_round.__main__:run_rtn
+      - auto-round-opt-rtn = auto_round.__main__:run_opt_rtn
+      - auto_round_opt_rtn = auto_round.__main__:run_opt_rtn
       - auto-round-best = auto_round.__main__:run_best
       - auto_round_best = auto_round.__main__:run_best
       - auto-round-light = auto_round.__main__:run_light
@@ -64,13 +68,16 @@ tests:
       - auto-round --help
       - auto_round_eval --help
       - auto-round-eval --help
-      - auto-round-fast --help
-      - auto_round_fast --help
+      - auto_round_mllm --help
+      - auto-round-mllm --help
+      - auto-round-rtn --help
+      - auto_round_rtn --help
+      - auto-round-opt-rtn --help
+      - auto_round_opt_rtn --help
       - auto-round-best --help
       - auto_round_best --help
       - auto-round-light --help
       - auto_round_light --help
-
 about:
   summary: "Repository of AutoRound: Advanced Weight-Only Quantization Algorithm for LLMs"
   license: Apache-2.0

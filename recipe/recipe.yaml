@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: auto-round
-  version: "0.14.0"
+  version: "0.14.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/auto_round-${{ version }}.tar.gz
-  sha256: fb78b5906f4bb8fb1a52327f7617838ac82cc75546a207f8bd2c87ac44b73ab0
+  sha256: 202d51eeb162ae50861627c706df3063386662d6bbf0355b25e5b706c78f293c
 
 build:
   number: 0

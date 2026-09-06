@@ -13,7 +13,7 @@ source:
   sha256: d6b4ee15e13654da6a2beae9c6bdc3d8bb9ec2a6fe3e26b37d1ec01da0ad8edc
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
@@ -48,7 +48,7 @@ requirements:
     - threadpoolctl
     - pytorch
     - tqdm
-    - transformers >=4.38,<5
+    - transformers >=4.38,<5.16
     - pydantic
 
 tests:

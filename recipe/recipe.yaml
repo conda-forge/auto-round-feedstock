@@ -38,7 +38,8 @@ requirements:
     - python ${{ python_min }}.*
     - pytorch
     - pip
-    - setuptools
+    - setuptools >=64
+    - wheel
   run:
     - python >=${{ python_min }}
     - accelerate
@@ -50,6 +51,7 @@ requirements:
     - tqdm
     - transformers >=4.38,<5.16
     - pydantic
+    - requests
 
 tests:
   - python:

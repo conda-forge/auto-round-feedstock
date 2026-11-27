@@ -1,3 +1,5 @@
+DOCKER_PLATFORM:
+- linux/amd64
 channel_sources:
 - conda-forge
 channel_targets:
@@ -7,4 +9,4 @@ docker_image:
 python_min:
 - '3.11'
 pytorch:
-- '2.12'
+- '2.14'

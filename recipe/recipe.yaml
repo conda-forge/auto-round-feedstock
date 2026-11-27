@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: auto-round
-  version: "0.16.1"
+  version: "0.17.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/auto_round-${{ version }}.tar.gz
-  sha256: 6d49c9b4962ed1f4f06e826986d8bd9edb1c9b9f553a09f3b70ca387d9b45bc6
+  sha256: a3fdc5b77712abc2301b757d73d8eb602444ddde41f2c8548b84ecc3f3846263
 
 build:
   number: 0
@@ -44,6 +44,7 @@ requirements:
     - python >=${{ python_min }}
     - accelerate
     - datasets
+    - filelock
     - numpy
     - py-cpuinfo
     - threadpoolctl
